@@ -1,0 +1,4040 @@
+GAME
+{
+	version = 1.1.3
+	Title = CSNA Career Normal (CAREER)
+	Description = No description available.
+	linkURL = 
+	linkCaption = 
+	Mode = CAREER
+	Status = 1
+	scene = 5
+	editor = None
+	flag = ThreePounds/Flags/CNSA
+	launchID = 1
+	modded = True
+	envInfo =  - Environment Info - Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe -single-instance -popupwindow - 
+	PARAMETERS
+	{
+		preset = Normal
+		FLIGHT
+		{
+			CanQuickSave = True
+			CanQuickLoad = True
+			CanAutoSave = True
+			CanUseMap = True
+			CanSwitchVesselsNear = True
+			CanSwitchVesselsFar = True
+			CanTimeWarpHigh = True
+			CanTimeWarpLow = True
+			CanEVA = True
+			CanIVA = True
+			CanBoard = True
+			CanRestart = True
+			CanLeaveToEditor = True
+			CanLeaveToTrackingStation = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		EDITOR
+		{
+			CanSave = True
+			CanLoad = True
+			CanStartNew = True
+			CanLaunch = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+			startUpMode = 0
+			craftFileToLoad = 
+		}
+		TRACKINGSTATION
+		{
+			CanFlyVessel = True
+			CanAbortVessel = True
+			CanLeaveToSpaceCenter = True
+			CanLeaveToMainMenu = False
+		}
+		SPACECENTER
+		{
+			CanGoInVAB = True
+			CanGoInSPH = True
+			CanGoInTrackingStation = True
+			CanLaunchAtPad = True
+			CanLaunchAtRunway = True
+			CanGoToAdmin = True
+			CanGoToAstronautC = True
+			CanGoToMissionControl = True
+			CanGoToRnD = True
+			CanSelectFlag = True
+			CanLeaveToMainMenu = True
+		}
+		DIFFICULTY
+		{
+			AutoHireCrews = False
+			MissingCrewsRespawn = True
+			BypassEntryPurchaseAfterResearch = True
+			AllowStockVessels = False
+			IndestructibleFacilities = False
+			ResourceAbundance = 1
+			ReentryHeatScale = 1
+		}
+		CAREER
+		{
+			TechTreeUrl = GameData\ModuleManager.TechTree
+			StartingFunds = 25000
+			StartingScience = 0
+			StartingReputation = 0
+			FundsGainMultiplier = 1
+			RepGainMultiplier = 1
+			ScienceGainMultiplier = 1
+			FundsLossMultiplier = 1
+			RepLossMultiplier = 1
+			RepLossDeclined = 1
+		}
+	}
+	SCENARIO
+	{
+		name = LastKSC
+		scene = 8
+		LastLaunchSite = cn_jiuquan
+	}
+	SCENARIO
+	{
+		name = ResourceScenario
+		scene = 7, 8, 5, 6
+		RESOURCE_SETTINGS
+		{
+			GameSeed = 214003055
+			MaxDeltaTime = 21600
+		}
+	}
+	SCENARIO
+	{
+		name = ContractSystem
+		scene = 7, 8, 5, 6
+		update = -1000
+		version = 1.1.3
+		WEIGHTS
+		{
+			ConfiguredContract = 30
+			SatelliteContract = 30
+			CollectScience = 30
+		}
+		CONTRACTS
+		{
+			CONTRACT
+			{
+				guid = bc03b8cb-0f18-4ecf-90f6-dd581f0fa2ff
+				type = ConfiguredContract
+				prestige = 0
+				seed = 2043048956
+				state = Active
+				agent = Federation Aeronautique Internationale
+				deadlineType = None
+				expiryType = Floating
+				autoAccept = True
+				ignoresWeight = True
+				values = 6471840,0,0,250,0,0,4,0,6472015.5,175.500000000016,0,0
+				subtype = recordUncrewedAlt
+				title = Uncrewed Altitude Record of 10 km.
+				description = We want you to set a new uncrewed altitude record! Reach 10 km.
+				synopsis = Set an uncrewed altitude record of 10 km.
+				completedMessage = Congratulations! You've set a new uncrewed altitude record!
+				hash = -9191532
+				targetBody = Earth
+				BEHAVIOUR
+				{
+					type = ContractConfigurator.Behaviour.Expression
+					CONTRACT_OFFERED
+					{
+					}
+					CONTRACT_ACCEPTED
+					{
+					}
+					CONTRACT_COMPLETED_SUCCESS
+					{
+						type = Double
+						RP0_SoundingAltitudeIndex = RP0_SoundingAltitudeIndex + 1
+					}
+					CONTRACT_COMPLETED_FAILURE
+					{
+					}
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachState
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordUncrewedAlt
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					targetBody = Earth
+					minAltitude = 10000
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Earth
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordUncrewedAlt
+						title = Destination: Earth
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Altitude: Above 10,000 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordUncrewedAlt
+						title = Altitude: Above 10,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 198da1c2-d5e9-4bc3-a155-fda5f8619dc1
+				type = ConfiguredContract
+				prestige = 0
+				seed = 1820700481
+				state = Active
+				agent = Federation Aeronautique Internationale
+				deadlineType = None
+				expiryType = Floating
+				autoAccept = True
+				ignoresWeight = True
+				values = 4500000,0,0,575,0,0,6,0,4500175.54,175.540000000016,0,0
+				subtype = recordCrewedAlt
+				title = Crewed Altitude Record of 5 km.
+				description = We want you to set a new crewed altitude record! Fly/rocket above 5000 km with crew aboard.
+				synopsis = Set a crewed altitude record of 5 km.
+				completedMessage = Congratulations! You've set a new crewed altitude record!
+				hash = 228507376
+				targetBody = Earth
+				BEHAVIOUR
+				{
+					type = ContractConfigurator.Behaviour.Expression
+					CONTRACT_OFFERED
+					{
+					}
+					CONTRACT_ACCEPTED
+					{
+					}
+					CONTRACT_COMPLETED_SUCCESS
+					{
+						type = Double
+						RP0_CrewedAltitudeIndex = RP0_CrewedAltitudeIndex + 1
+					}
+					CONTRACT_COMPLETED_FAILURE
+					{
+					}
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachState
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordCrewedAlt
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					targetBody = Earth
+					minAltitude = 5000
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Earth
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedAlt
+						title = Destination: Earth
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Altitude: Above 5,000 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedAlt
+						title = Altitude: Above 5,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordCrewedAlt
+					title = 
+					notes = 
+					completedMessage = 
+					hideChildren = True
+					allowStateReset = True
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedAlt
+						title = Count: At least 1
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = 28ce6ab9-66ca-4a57-903b-cdd048528a6d
+				type = ConfiguredContract
+				prestige = 0
+				seed = 1771569625
+				state = Active
+				agent = Federation Aeronautique Internationale
+				deadlineType = None
+				expiryType = Floating
+				autoAccept = True
+				ignoresWeight = True
+				values = 7002360,0,0,675,0,0,8,0,7002535.58,175.580000000016,0,0
+				subtype = recordUncrewedSpeed
+				title = Uncrewed Speed Record of 350 m/s.
+				description = We want you to set a new uncrewed speed record! Reach 350 m/s.
+				synopsis = Set an uncrewed speed record of 350 m/s.
+				completedMessage = Congratulations! You've set a new uncrewed speed record!
+				hash = -776173468
+				targetBody = Earth
+				BEHAVIOUR
+				{
+					type = ContractConfigurator.Behaviour.Expression
+					CONTRACT_OFFERED
+					{
+					}
+					CONTRACT_ACCEPTED
+					{
+					}
+					CONTRACT_COMPLETED_SUCCESS
+					{
+						type = Double
+						RP0_SoundingSpeedIndex = RP0_SoundingSpeedIndex + 1
+					}
+					CONTRACT_COMPLETED_FAILURE
+					{
+					}
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachState
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordUncrewedSpeed
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					targetBody = Earth
+					minSpeed = 350
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Earth
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordUncrewedSpeed
+						title = Destination: Earth
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Speed: Greater than 350 m/s
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordUncrewedSpeed
+						title = Speed: Greater than 350 m/s
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = b46243ff-d36c-4ce4-a954-ecfc3308a382
+				type = ConfiguredContract
+				prestige = 0
+				seed = 1554142469
+				state = Active
+				agent = Federation Aeronautique Internationale
+				deadlineType = None
+				expiryType = Floating
+				autoAccept = True
+				ignoresWeight = True
+				values = 6075240,0,0,40000,0,0,32,0,6075415.62,175.620000000016,0,0
+				subtype = recordCrewedDuration
+				title = Crewed Duration Record of 1 day
+				description = We want you to set a new space duration record! Keep your crew in space for at least 1 day and return home safely.
+				synopsis = Set a crewed duration record of 1 day
+				completedMessage = Congratulations! You've set a new crewed duration record!
+				hash = 1526946560
+				targetBody = Earth
+				BEHAVIOUR
+				{
+					type = ContractConfigurator.Behaviour.Expression
+					CONTRACT_OFFERED
+					{
+					}
+					CONTRACT_ACCEPTED
+					{
+					}
+					CONTRACT_COMPLETED_SUCCESS
+					{
+						type = Double
+						RP0_CrewedDurationIndex = RP0_CrewedDurationIndex + 1
+					}
+					CONTRACT_COMPLETED_FAILURE
+					{
+					}
+				}
+				PARAM
+				{
+					name = All
+					id = durationInSpace
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordCrewedDuration
+					title = Stay in space for 1 day
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedDuration
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Earth
+						targetBody = Moon
+						targetBody = Venus
+						targetBody = Mars
+						targetBody = Sun
+						targetBody = Phobos
+						targetBody = Deimos
+						situation = ORBITING
+						situation = SUB_ORBITAL
+						situation = ESCAPING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Earth, the Moon, Venus, Mars, the Sun, Phobos or Deimos
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = RP0.recordCrewedDuration
+							title = Destination: Earth, the Moon, Venus, Mars, the Sun, Phobos or Deimos
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Orbit, Sub-orbital trajectory or Escape trajectory
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = RP0.recordCrewedDuration
+							title = Situation: Orbit, Sub-orbital trajectory or Escape trajectory
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = HasCrew
+						id = HasCrew
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedDuration
+						title = 
+						notes = 
+						completedMessage = 
+						hideChildren = True
+						allowStateReset = True
+						minCrew = 1
+						maxCrew = 2147483647
+						minExperience = 0
+						maxExperience = 5
+						PARAM
+						{
+							name = CountParameterDelegate`1
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = RP0.recordCrewedDuration
+							title = Count: At least 1
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = Duration
+					id = Duration
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordCrewedDuration
+					title = 
+					notes = 
+					completedMessage = 
+					duration = 86400
+					endTime = 0
+					startCriteria = CONTRACT_ACCEPTANCE
+					triggered = True
+				}
+			}
+			CONTRACT
+			{
+				guid = c0620ed5-1c18-4d17-a984-1fef973391a4
+				type = ConfiguredContract
+				prestige = 0
+				seed = 1982823264
+				state = Active
+				agent = Federation Aeronautique Internationale
+				deadlineType = None
+				expiryType = Floating
+				autoAccept = True
+				ignoresWeight = True
+				values = 3952260,0,0,1700,0,0,10,0,3952435.66,175.660000000016,0,0
+				subtype = recordCrewedSpeed
+				title = Crewed Speed Record of 350 m/s.
+				description = We want you to set a new crewed speed record! Fly/rocket above 350 m/s with crew aboard.
+				synopsis = Set a crewed speed record of 350 m/s.
+				completedMessage = Congratulations! You've set a new crewed speed record!
+				hash = -369759823
+				targetBody = Earth
+				BEHAVIOUR
+				{
+					type = ContractConfigurator.Behaviour.Expression
+					CONTRACT_OFFERED
+					{
+					}
+					CONTRACT_ACCEPTED
+					{
+					}
+					CONTRACT_COMPLETED_SUCCESS
+					{
+						type = Double
+						RP0_CrewedSpeedIndex = RP0_CrewedSpeedIndex + 1
+					}
+					CONTRACT_COMPLETED_FAILURE
+					{
+					}
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachState
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordCrewedSpeed
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					targetBody = Earth
+					minSpeed = 350
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Earth
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedSpeed
+						title = Destination: Earth
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Speed: Greater than 350 m/s
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedSpeed
+						title = Speed: Greater than 350 m/s
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordCrewedSpeed
+					title = 
+					notes = 
+					completedMessage = 
+					hideChildren = True
+					allowStateReset = True
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedSpeed
+						title = Count: At least 1
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+			CONTRACT
+			{
+				guid = e027d8f8-028d-4ab3-97a2-16f62dda46af
+				type = ConfiguredContract
+				prestige = 0
+				seed = 1816757026
+				state = Active
+				agent = Federation Aeronautique Internationale
+				deadlineType = None
+				expiryType = Floating
+				autoAccept = True
+				ignoresWeight = True
+				values = 8137920,0,0,50000,0,0,35,0,8138095.7,175.700000000016,0,0
+				subtype = recordCrewedCount
+				title = Crew Count Record of 1 Crew
+				description = We want you to set a new crew count record! Have at least 1 crew on the same spacecraft/station at the same time and return them home safely.
+				synopsis = Set a crew count record of 1
+				completedMessage = Congratulations! You've set a new crew count record!
+				hash = 1045826118
+				targetBody = Earth
+				BEHAVIOUR
+				{
+					type = ContractConfigurator.Behaviour.Expression
+					CONTRACT_OFFERED
+					{
+					}
+					CONTRACT_ACCEPTED
+					{
+					}
+					CONTRACT_COMPLETED_SUCCESS
+					{
+						type = Double
+						RP0_CrewCountIndex = RP0_CrewCountIndex + 1
+					}
+					CONTRACT_COMPLETED_FAILURE
+					{
+					}
+				}
+				PARAM
+				{
+					name = All
+					id = crewCountInSpace
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.recordCrewedCount
+					title = Have 1 on the same vessel while in space.
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedCount
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Earth
+						targetBody = Moon
+						targetBody = Venus
+						targetBody = Mars
+						targetBody = Sun
+						targetBody = Phobos
+						targetBody = Deimos
+						situation = ORBITING
+						situation = SUB_ORBITAL
+						situation = ESCAPING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Earth, the Moon, Venus, Mars, the Sun, Phobos or Deimos
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = RP0.recordCrewedCount
+							title = Destination: Earth, the Moon, Venus, Mars, the Sun, Phobos or Deimos
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Orbit, Sub-orbital trajectory or Escape trajectory
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = RP0.recordCrewedCount
+							title = Situation: Orbit, Sub-orbital trajectory or Escape trajectory
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = HasCrew
+						id = HasCrew
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.recordCrewedCount
+						title = 
+						notes = 
+						completedMessage = 
+						hideChildren = True
+						allowStateReset = True
+						minCrew = 1
+						maxCrew = 2147483647
+						minExperience = 0
+						maxExperience = 5
+						PARAM
+						{
+							name = CountParameterDelegate`1
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = RP0.recordCrewedCount
+							title = Count: At least 1
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioContractEvents
+		scene = 7, 8, 5
+		id = -244209758
+	}
+	SCENARIO
+	{
+		name = Funding
+		scene = 7, 8, 5, 6
+		funds = 15000
+	}
+	SCENARIO
+	{
+		name = ScenarioNewGameIntro
+		scene = 5, 6, 8
+		kscComplete = True
+		editorComplete = True
+		tsComplete = True
+	}
+	SCENARIO
+	{
+		name = ProgressTracking
+		scene = 7, 8, 5
+		Progress
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = ResearchAndDevelopment
+		scene = 7, 8, 5, 6
+		sci = 0
+		Tech
+		{
+			id = start
+			state = Available
+			cost = 0
+			part = RO-B9ProcWing-Early
+			part = RO-B9ProcCS-Early
+			part = RO-B9ProcAMWing-Early
+			part = Engineer7500
+			part = EngineerChip
+			part = KzInterstageAdapter2
+			part = squad.interstage.adapter
+			part = squad.interstageSize3
+			part = KzResizableFairingBase
+			part = fairingSize1
+			part = fairingSize2
+			part = fairingSize3
+			part = KzResizableFairingBaseRing
+			part = KzProcFairingFuselage1
+			part = KzProcFairingFuselage2
+			part = KzThrustPlate
+			part = KzProcFairingSide1
+			part = KzProcFairingAtlas
+			part = KzProcFairingConeEgg
+			part = KzProcFairingDelta
+			part = KzProcFairingJupiter
+			part = KzProcFairingLongMarch
+			part = KzProcFairingLongMarch2
+			part = KzProcFairingProton
+			part = KzProcFairingGryphonSoyuz
+			part = KzProcFairingTitan
+			part = KzProcFairingGryphonTsyklon
+			part = KzProcFairingSide1st
+			part = KzProcFairingSide1stock
+			part = KzProcFairingSide1us
+			part = KzProcFairingSide2
+			part = KzProcFairingSide2ger
+			part = proceduralBattery
+			part = proceduralNoseCone
+			part = proceduralStackDecoupler
+			part = proceduralStructural
+			part = proceduralCrewTube
+			part = proceduralTankOre
+			part = proceduralTankRealFuels
+			part = RC.cone
+			part = RC.cone.double
+			part = RC.radial
+			part = RC.stack
+			part = TinyTim
+			part = RTShortAntenna1
+			part = noseCone
+			part = airScoop
+			part = AdvancedCanard
+			part = CanardController
+			part = sweptWing
+			part = tailfin
+			part = basicFin
+			part = CircularIntake
+			part = pointyNoseConeA
+			part = pointyNoseConeB
+			part = standardNoseCone
+			part = airplaneTail
+			part = airplaneTailB
+			part = miniIntake
+			part = rocketNoseCone
+			part = R8winglet
+			part = winglet
+			part = winglet3
+			part = wingConnector
+			part = wingConnector2
+			part = wingConnector3
+			part = wingConnector4
+			part = wingConnector5
+			part = deltaWing
+			part = delta.small
+			part = StandardCtrlSrf
+			part = elevon2
+			part = elevon3
+			part = smallCtrlSrf
+			part = elevon5
+			part = wingStrake
+			part = structuralWing
+			part = structuralWing2
+			part = structuralWing3
+			part = structuralWing4
+			part = sweptWing1
+			part = sweptWing2
+			part = RP0probeSounding0-3m
+			part = GuidanceStart1m
+			part = strutConnector
+			part = ROAerobeeSustainer
+			part = RO-STAR-37
+			part = sepMotor1
+			part = SnubOtron
+			part = miniFuelTank
+			part = OscarDtank
+			part = OscarEtank
+			part = rcsTankMini
+			part = GooExperiment
+			part = sensorBarometer
+			part = sensorThermometer
+			part = radialEngineBody
+			part = nacelleBody
+			part = MK1IntakeFuselage
+			part = structuralIBeam2
+			part = structuralIBeam3
+			part = structuralIBeam1
+			part = structuralMiniNode
+			part = structuralPanel1
+			part = Angledpanel
+			part = structuralPanel2
+			part = structuralPanel2
+			part = smallHardpoint
+			part = structuralPylon
+			part = strutCube
+			part = strutCubeSmall
+			part = strutCubeMedium
+			part = strutCubeLarge
+			part = strutOcto
+			part = trussAdapter
+			part = trussPiece1x
+			part = trussPiece3x
+			part = longAntenna
+			part = radialDecoupler1-2
+			part = radialDecoupler
+			part = smallRadialDecoupler
+			part = stackDecouplerMini
+			part = ladder1
+			part = MedLadder
+			part = LongLadder
+			part = MedLadderUtility
+			part = SMLadderUtility
+			part = LGLadderUtility
+			part = telescopicLadder
+			part = telescopicLadderBay
+			part = launchClamp1
+			part = RO.FASA.MercuryPodRCS
+			part = RO.FASA.ExplorerRCS
+			part = RO.linearRcs.tenth
+			part = parachuteSingle
+			part = parachuteLarge
+			part = parachuteRadial
+			part = parachuteDrogue
+			part = spotLight1
+			part = spotLight2
+			part = SmallSpotLight
+			part = SmallPointLight
+			part = SmallStripLight
+			part = GearFixed
+			part = GearFree
+			part = GearSmall
+			part = SmallGearBay
+			part = LRadialAirIntake
+			part = SXTInlineAirIntake
+			part = SXTInlineAirIntakeTiny
+			part = SXTelevonSmall
+			part = SXTelevonSmallHalf
+			part = SXTelevonLarge
+			part = SXTelevonVeryLarge
+			part = SXTWingSmall
+			part = SXTWingSmallHalf
+			part = 625mBonny
+			part = SXTClyde
+			part = LMiniAircaftTail
+			part = SXTBuzzard
+			part = SXTke111
+			part = SXTKO211Dprop
+			part = SXTTinyprop
+			part = SXTJ213
+			part = SXT.Jumo213A
+			part = SXTMerlin66prop
+			part = SXTMerlin46Prop
+			part = SXTPWR2800
+			part = SXTR280018WProp
+			part = SXTR280021Prop
+			part = RO-DerwentV
+			part = SXTradialWindow
+			part = SXTProbeGooo
+			part = SXTAntenna
+			part = SXTProtonlikeNoseCone
+			part = SXTlaunchclamp1
+			part = SXTFuel625m
+			part = SXT625mFuel4
+			part = Bumper.Body
+			part = Bumper.Control
+			part = Bumper.Engine
+			part = Bumper.Engine.Unclad
+			part = Bumper.Fin
+			part = Bumper.Nose
+			part = structuralPanel2
+			part = structuralPanel2
+			part = structuralPanel2
+			part = structuralPanel2
+		}
+	}
+	SCENARIO
+	{
+		name = VesselRecovery
+		scene = 5, 7, 8, 6
+	}
+	SCENARIO
+	{
+		name = Reputation
+		scene = 7, 8, 5, 6
+		rep = 0
+	}
+	SCENARIO
+	{
+		name = StrategySystem
+		scene = 7, 8, 5, 6
+		STRATEGIES
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioAchievements
+		scene = 7, 8, 5, 6
+	}
+	SCENARIO
+	{
+		name = ScenarioDestructibles
+		scene = 5, 7, 6, 8
+		SpaceCenter/Administration/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/AstronautComplex/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/LaunchPad/Facility/Flag
+		{
+			intact = True
+		}
+		SpaceCenter/MissionControl/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ForeverAlone
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/mainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section4
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section3
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section2
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/Section1
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End27
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/End09
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SW
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NW
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_NE
+		{
+			intact = True
+		}
+		SpaceCenter/Runway/Facility/model_runway_new_v43/runway_light_SE
+		{
+			intact = True
+		}
+		SpaceCenter/SpaceplaneHangar/Facility/Building
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/OuterDish
+		{
+			intact = True
+		}
+		SpaceCenter/TrackingStation/Facility/building
+		{
+			intact = True
+		}
+		SpaceCenter/FlagPole/Facility
+		{
+			intact = True
+		}
+		SpaceCenter/VehicleAssemblyBuilding/Facility/VAB2
+		{
+			intact = True
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioUpgradeableFacilities
+		scene = 5, 6, 7, 8
+		SpaceCenter/LaunchPad
+		{
+			lvl = 0
+		}
+		SpaceCenter/Runway
+		{
+			lvl = 0
+		}
+		SpaceCenter/VehicleAssemblyBuilding
+		{
+			lvl = 0
+		}
+		SpaceCenter/SpaceplaneHangar
+		{
+			lvl = 0
+		}
+		SpaceCenter/TrackingStation
+		{
+			lvl = 0
+		}
+		SpaceCenter/AstronautComplex
+		{
+			lvl = 0
+		}
+		SpaceCenter/MissionControl
+		{
+			lvl = 0
+		}
+		SpaceCenter/ResearchAndDevelopment
+		{
+			lvl = 0
+		}
+		SpaceCenter/Administration
+		{
+			lvl = 0
+		}
+		SpaceCenter/FlagPole
+		{
+			lvl = 0
+		}
+	}
+	SCENARIO
+	{
+		name = CutSceneConfigurator
+		scene = 7
+	}
+	SCENARIO
+	{
+		name = ContractConfiguratorSettings
+		scene = 5, 7, 8
+		lastMCButton = All
+		DisplayOfferedOrbits = True
+		DisplayOfferedWaypoints = True
+		DisplayActiveOrbits = True
+		DisplayActiveWaypoints = True
+		CONTRACT_STATE
+		{
+			type = CollectScience
+			enabled = True
+		}
+		CONTRACT_STATE
+		{
+			type = ExploreBody
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = GrandTour
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = PartTest
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = PlantFlag
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = RecoverAsset
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = ARMContract
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = BaseContract
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = ISRUContract
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = SatelliteContract
+			enabled = True
+		}
+		CONTRACT_STATE
+		{
+			type = StationContract
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = SurveyContract
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = TourismContract
+			enabled = False
+		}
+		CONTRACT_STATE
+		{
+			type = WorldFirstContract
+			enabled = False
+		}
+	}
+	SCENARIO
+	{
+		name = ContractPreLoader
+		scene = 7, 8, 5
+		CONTRACT
+		{
+			guid = c54c1c7f-14d8-4d7b-b39c-686a25b19b3a
+			type = ConfiguredContract
+			prestige = 0
+			seed = 1016349438
+			state = Offered
+			agent = Federation Aeronautique Internationale
+			deadlineType = None
+			expiryType = None
+			ignoresWeight = True
+			values = 345600,0,2000,50000,2000,0,10,0,108186.08,0,0,0
+			subtype = first_KarmanUncrewed
+			title = Pass the Karman Line (uncrewed)
+			description = The Karman line is the line at which the speed necessary to maintain altitude via lift is the same as the speed required for orbit. It's the traditional dividing line between the atmosphere and space (despite there being nonzero pressure well above it; Earth's atmosphere extends quite far indeed). We want you to send something above it!
+			synopsis = Pass the Karman line with an uncrewed craft.
+			completedMessage = Congratulations! You've reached space!
+			hash = 890413932
+			targetBody = Earth
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = RP0.first_KarmanUncrewed
+				title = Pass the Karman Line (uncrewed).
+				notes = 
+				completedMessage = 
+				define = karmanUncrewedSpacecraft
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = NewVessel
+					id = NewVessel
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_KarmanUncrewed
+					title = Launch a new vessel
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					launchID = 0
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachStateKarman
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_KarmanUncrewed
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					targetBody = Earth
+					minAltitude = 100000
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Earth
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Destination: Earth
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Altitude: Above 100,000 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Altitude: Above 100,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = HasCrew
+					id = HasNoCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_KarmanUncrewed
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					minCrew = 0
+					maxCrew = 0
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Unmanned
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Unmanned
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 69f2d071-214f-42ac-949e-0c489068c86d
+			type = ConfiguredContract
+			prestige = 0
+			seed = 661815440
+			state = Offered
+			agent = Federation Aeronautique Internationale
+			deadlineType = None
+			expiryType = None
+			ignoresWeight = True
+			values = 432000,0,1000,500,1000,0,0,0,108186.12,0,0,0
+			subtype = first_FirstFlight
+			title = First Flight
+			description = Congratulations on starting a new space program! For your first mission, you should launch your first vessel. Just design and build a vessel, roll it out to the pad (or runway if an airplane), and stage to take off! (And note all the records to break in the 'Active Contracts' tab. They update, so keep checking.)
+			synopsis = Launch a rocket or aircraft.
+			completedMessage = Congratulations! Your space program is off to a great start.
+			hash = 2071149578
+			targetBody = Earth
+			PARAM
+			{
+				name = NewVessel
+				id = NewVessel
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = RP0.first_FirstFlight
+				title = Launch a new vessel
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				launchID = 0
+			}
+			PARAM
+			{
+				name = ReachState
+				id = ReachStateFlying
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = RP0.first_FirstFlight
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				targetBody = Earth
+				situation = FLYING
+				minRateOfClimb = 1
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = Destination: Earth
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Destination: Earth
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = Situation: Flying
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Situation: Flying
+					notes = 
+					completedMessage = 
+				}
+				PARAM
+				{
+					name = ParameterDelegate`1
+					id = Rate of Climb: Greater than 1 m/s
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					title = Rate of Climb: Greater than 1 m/s
+					notes = 
+					completedMessage = 
+				}
+			}
+		}
+		UNREAD_CONTRACTS
+		{
+			contract = bc03b8cb-0f18-4ecf-90f6-dd581f0fa2ff
+			contract = 198da1c2-d5e9-4bc3-a155-fda5f8619dc1
+			contract = 28ce6ab9-66ca-4a57-903b-cdd048528a6d
+			contract = b46243ff-d36c-4ce4-a954-ecfc3308a382
+			contract = c0620ed5-1c18-4d17-a984-1fef973391a4
+			contract = e027d8f8-028d-4ab3-97a2-16f62dda46af
+			contract = c54c1c7f-14d8-4d7b-b39c-686a25b19b3a
+			contract = 69f2d071-214f-42ac-949e-0c489068c86d
+		}
+	}
+	SCENARIO
+	{
+		name = BiomeTracker
+		scene = 7, 8, 5
+	}
+	SCENARIO
+	{
+		name = PersistentDataStore
+		scene = 7, 8, 5
+		DATA
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = ContractVesselTracker
+		scene = 7, 8, 5
+	}
+	SCENARIO
+	{
+		name = RemoteTechProgressTracker
+		scene = 7, 8, 5
+		nextCheck = 26
+		CelestialBodyInfo
+		{
+			body = Sun
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Earth
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Mercury
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Venus
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Callisto
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Jupiter
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Titan
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Phobos
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Io
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Europa
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Moon
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Mars
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Deimos
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Ganymede
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Saturn
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Mimas
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Enceladus
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Tethys
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Dione
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Rhea
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Iapetus
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Uranus
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Neptune
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Triton
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Pluto
+			coverage = 0
+			activeRange = 0
+		}
+		CelestialBodyInfo
+		{
+			body = Charon
+			coverage = 0
+			activeRange = 0
+		}
+	}
+	SCENARIO
+	{
+		name = DeadlyReentryScenario
+		scene = 7, 5
+		difficultySetting = 1
+		displayCrewGForceWarning = True
+	}
+	SCENARIO
+	{
+		name = FARSettingsScenarioModule
+		scene = 5, 6, 7
+		newGame = False
+		fractionTransonicDrag = 1
+		gaussianVehicleLengthFractionForSmoothing = 0.015
+		numAreaSmoothingPasses = 2
+		numDerivSmoothingPasses = 1
+		numVoxelsControllableVessel = 250000
+		numVoxelsDebrisVessel = 20000
+		minPhysTicksPerUpdate = 80
+		useHigherResVoxelPoints = True
+		index = 4
+		allowStructuralFailures = True
+		showMomentArrows = False
+		useBlizzyToolbar = False
+		aeroFailureExplosions = True
+		FlightGUISettings
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = DiscoverableObjects
+		scene = 7, 8, 5
+	}
+	SCENARIO
+	{
+		name = RFUpgradeManager
+		scene = 6, 5
+		EngineConfigUpgrade
+		{
+			name = RD-108A_14D21
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-118_11D512
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-108MM_8D727
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-108_8D75K
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-108_8D75PS
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-2
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-4
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Model8096L
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Model8096A
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Model8096-39
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = XLR81-BA-13
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = XLR81-BA-11
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = XLR81-BA-7
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = XLR81-BA-5
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-103M
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-103
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Cavea-B
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Aerozine50+NTO
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = UDMH+NTO
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = MMH+NTO
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Nitrogen
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Helium
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = NitrousOxide
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Hydrazine
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = HTP
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = UA1205
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AstrisII
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AstrisI
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = BE-4
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = XLR11
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = A-4
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 4x NK-39
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 4x NK-21
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 8x NK-43
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 8x NK-15V
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 30x NK-33
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 30x NK-15
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = X-405
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = X-405-Exhaust
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-138
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-118K
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-118F
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-118E
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-104D
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-118D
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-118
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-142
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-101A
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-42
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-37
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = NERVA-II
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = TRITON
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Hydrogen-NTR
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Star17
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-107A_14D22
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-117_11D511
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-107MM_8D728
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-107_8D74K
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-107_8D74PS
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-171M
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-171
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-170
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-0120
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = J-2-200klbf
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = J-2S
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = J-2
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Waxwing
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Gamma-2
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Gamma-8
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LMDE-J
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LMDE-H
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LMAE
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = SolidFuel
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = BabySergeant
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Star-37FM
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Altair-II
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Star48BV
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Star-48B/Long
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Star-48B/Short
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-30B
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-30XL
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = M55
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Altair
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-120/Regressive
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-120/Saddle
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Castor-120
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-25D/E
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-25C
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-25A
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-25
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = F-1A
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = F-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = F-1B
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-190
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RSRMV
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-275M
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-275
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-253
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1DVac+
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1DVac
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1D++
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1D+
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1D
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1CVac
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1C
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1BVac
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1B
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Merlin1A
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = CECE-Methane
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = CECE-High
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = CECE-Base
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10C-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10B-2
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10A-5
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10A-4-1/2
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10A-4
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10A-3-3A
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10A-3-3
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10A-3-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RL10A-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-0210
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = TR-201
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-855
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = E-1-Upgrade
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = E-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-27A
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-27
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = H-1-SaturnIB
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = H-1-SaturnI
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-56-OBA
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR89-NA-7.2
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR89-NA-7.1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR89-NA-6
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR89-NA-5
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR89-NA-3
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR79-NA-13
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR79-NA-11
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR79-NA-9
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR79-NA-3
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR87-LH2-VacuumUpgrade
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR87-LH2-SustainerUpgrade
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR87-LH2-Vacuum
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR87-LH2-TitanC
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-58M-CCN
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-58S
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-58M
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-58
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 11D33M
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = 11D33
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RS-56-OSA
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR105-NA-7.2
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR105-NA-7.1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR105-NA-5/6
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR105-NA-3
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = NERVA-I
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = CE-7.5
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = KVD-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-56
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = KVD-1-Verniers
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = XLR99
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-0109
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-0105
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR101-NA-15
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR101-NA-11
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = LR101-NA-3
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-27
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = XASR-1
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = WAC-Corporal
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AJ10-137
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = TD-339
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = J-2T-250K
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = J-2T-200K
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = AestusII
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = RD-856
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = NSTAR
+			unlocked = False
+		}
+		EngineConfigUpgrade
+		{
+			name = Normal
+			unlocked = False
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = 45DegreeRCSHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = InlineRCSHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = HeavyRcsHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SXTRCSRackHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBoonExtHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockTenthHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockQuarterHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = SquadRCSBlockHalfHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RCSBlockHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-linearRcs-tenthHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-ExplorerRCSHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = RO-FASA-MercuryPodRCSHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = linearRcsHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = vernierEngineHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineCavea-B
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineAerozine50+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineUDMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineMMH+NTO
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineNitrogen
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineHelium
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineNitrousOxide
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineHydrazine
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = microEngineHTP
+			currentTL = 0
+		}
+		TLUpgrade
+		{
+			name = proceduralSRBRealFuelsNormal
+			currentTL = 0
+		}
+	}
+	SCENARIO
+	{
+		name = EntryCostModifier
+		scene = 6, 5
+	}
+	SCENARIO
+	{
+		name = SCANcontroller
+		scene = 7, 5, 8
+		colours = 0
+		map_markers = True
+		map_flags = True
+		map_waypoints = True
+		map_orbit = True
+		map_asteroids = True
+		map_grid = True
+		map_ResourceOverlay = False
+		projection = 0
+		map_width = 0
+		map_x = 100
+		map_y = 50
+		anomalyMarker = X
+		legend = False
+		scan_background = True
+		timeWarpResolution = 15
+		resourceSelection = Ore
+		dataRebuild = False
+		mainMapVisible = False
+		bigMapVisible = False
+		kscMapVisible = False
+		toolTips = True
+		useStockAppLauncher = True
+		resourceBiomeLock = True
+		useStockBiomes = False
+		biomeTransparency = 40
+		mechJebTargetSelection = False
+		easyModeScanning = True
+		needsNarrowBand = True
+		biomeBorder = True
+		disableStockResource = False
+		hiDetailZoomMap = False
+		planetaryOverlayTooltips = True
+		overlayInterpolation = 8
+		overlayMapHeight = 256
+		overlayBiomeHeight = 512
+		overlayTransparency = 0
+		version14Patch = True
+		trueGreyScale = False
+		groundTracks = True
+		groundTrackActiveOnly = True
+		exportCSV = False
+		scanThreshold = 0.9
+		useScanThreshold = True
+		slopeCutoff = 1
+		windowScale = 1
+		lowBiomeColor = 0,0.46,0.02345098,1
+		highBiomeColor = 0.7,0.2388235,0,1
+		lowSlopeColorOne = 0.004705883,0.6,0.3788235,1
+		highSlopeColorOne = 0.9764706,1,0.4627451,1
+		lowSlopeColorTwo = 0.9764706,1,0.4627451,1
+		highSlopeColorTwo = 0.94,0.2727843,0.007372549,1
+		Scanners
+		{
+		}
+		Progress
+		{
+			Body
+			{
+				Name = Earth
+				Disabled = False
+				MinHeightRange = -1500
+				MaxHeightRange = 6500
+				ClampHeight = 0
+				PaletteName = Default
+				PaletteSize = 7
+				PaletteReverse = False
+				PaletteDiscrete = False
+				Map = CAABAAAA-----0AHQAAAD0AIBYD0AwACAOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AOD-AODNAAEACw__
+			}
+		}
+		SCANResources
+		{
+			ResourceType
+			{
+				Resource = Ore
+				MinColor = 0.2414545,0.1207273,0.83,1
+				MaxColor = 0.7888628,0,0.94,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|7.500,1|1.000|7.500,2|1.000|7.500,3|1.000|7.500,4|1.000|7.500,5|1.000|7.500,6|1.000|7.500,7|1.000|7.500,8|1.000|7.500,9|1.000|7.500,10|1.000|7.500,11|1.000|7.500,12|1.000|7.500,13|1.000|7.500,14|1.000|7.500,15|1.000|7.500,16|1.000|7.500,1|1.000|15.000,2|1.000|15.000,3|1.000|15.000,4|1.000|15.000,5|1.000|15.000,6|1.000|15.000,7|1.000|15.000,8|1.000|15.000,9|1.000|15.000,10|1.000|15.000,11|1.000|15.000,12|1.000|15.000,13|1.000|15.000,14|1.000|15.000,15|1.000|15.000,16|1.000|15.000,17|1.000|15.000,18|1.000|15.000,19|1.000|15.000,20|1.000|15.000,21|1.000|15.000,22|1.000|15.000,23|1.000|15.000,24|1.000|15.000,25|1.000|15.000
+			}
+			ResourceType
+			{
+				Resource = Karbonite
+				MinColor = 0,0.3192157,0.74,1
+				MaxColor = 0.75,0.3823529,0,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.800|2.200,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = Minerals
+				MinColor = 0.4762353,0.04329412,0.92,1
+				MaxColor = 0,0.576471,0.07451,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = Substrate
+				MinColor = 0.6418824,0.01380392,0.88,1
+				MaxColor = 0.7428235,0.82,0,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = Uraninite
+				MinColor = 0,0.839216,0.760784,1
+				MaxColor = 1,0.2352941,0.03137255,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = Water
+				MinColor = 0.76,0,0.5722353,1
+				MaxColor = 0,0.5687844,0.98,1
+				Transparency = 20
+				MinMaxValues = 0|0.500|6.500,1|5.000|45.000,2|0.500|6.500,3|0.500|6.500,4|0.500|6.500,5|0.500|6.500,6|0.500|6.500,7|0.500|6.500,8|0.500|6.500,9|5.000|40.000,10|0.500|6.500,11|0.500|6.500,12|0.500|6.500,13|0.500|6.500,14|0.500|6.500,15|0.500|6.500,16|0.500|6.500,1|0.500|10.000,2|0.500|10.000,3|0.500|10.000,4|0.500|10.000,5|0.500|10.000,6|0.500|10.000,7|0.500|10.000,8|0.500|10.000,9|0.500|10.000,10|0.500|10.000,11|0.500|10.000,12|0.500|10.000,13|0.500|10.000,14|0.500|10.000,15|0.500|10.000,16|0.500|10.000,17|0.500|10.000,18|0.500|10.000,19|0.500|10.000,20|0.500|10.000,21|0.500|10.000,22|0.500|10.000,23|0.500|10.000,24|0.500|10.000,25|0.500|10.000
+			}
+			ResourceType
+			{
+				Resource = MetallicOre
+				MinColor = 0.72,0.5054118,0,1
+				MaxColor = 0,0.6302745,0.98,1
+				Transparency = 20
+				MinMaxValues = 8|1.000|6.500,1|1.000|6.500,0|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = MetalOre
+				MinColor = 0.1827843,0.59,0,1
+				MaxColor = 0.08658824,0.8947451,0.92,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|7.500,1|1.000|7.500,2|1.000|7.500,3|1.000|7.500,4|1.000|7.500,5|1.000|7.500,6|1.000|7.500,7|1.000|7.500,8|1.000|7.500,9|1.000|7.500,10|1.000|7.500,11|1.000|7.500,12|1.000|7.500,13|1.000|7.500,14|1.000|7.500,15|1.000|7.500,16|1.000|7.500
+			}
+			ResourceType
+			{
+				Resource = Dirt
+				MinColor = 1,0.2196078,0.772549,1
+				MaxColor = 0.3221961,0.79,0,1
+				Transparency = 20
+				MinMaxValues = 0|15.000|35.000,1|15.000|35.000,2|15.000|35.000,3|15.000|35.000,4|15.000|35.000,5|15.000|35.000,6|15.000|35.000,7|15.000|35.000,8|15.000|35.000,9|15.000|35.000,10|15.000|35.000,11|15.000|35.000,12|15.000|35.000,13|15.000|35.000,14|15.000|35.000,15|15.000|35.000,16|15.000|35.000,1|20.000|50.000,2|20.000|50.000,3|20.000|50.000,4|20.000|50.000,5|20.000|50.000,6|20.000|50.000,7|20.000|50.000,8|20.000|50.000,9|20.000|50.000,10|20.000|50.000,11|20.000|50.000,12|20.000|50.000,13|20.000|50.000,14|20.000|50.000,15|20.000|50.000,16|20.000|50.000,17|20.000|50.000,18|20.000|50.000,19|20.000|50.000,20|20.000|50.000,21|20.000|50.000,22|20.000|50.000,23|20.000|50.000,24|20.000|50.000,25|20.000|50.000
+			}
+			ResourceType
+			{
+				Resource = ExoticMinerals
+				MinColor = 0.9395686,0.97,0,1
+				MaxColor = 0.4678824,0,0.97,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = Gypsum
+				MinColor = 0.78,0.2905882,0,1
+				MaxColor = 0,1,0.8078431,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = Hydrates
+				MinColor = 0.1721177,0.77,0.3985882,1
+				MaxColor = 0.93,0.4522353,0,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|25.000,2|1.000|25.000,3|1.000|25.000,4|1.000|25.000,5|1.000|25.000,6|1.000|25.000,7|1.000|25.000,8|1.000|25.000,9|1.000|25.000,10|1.000|25.000,11|1.000|25.000,12|1.000|25.000,13|1.000|25.000,14|1.000|25.000,15|1.000|25.000,16|1.000|25.000,17|1.000|25.000,18|1.000|25.000,19|1.000|25.000,20|1.000|25.000,21|1.000|25.000,22|1.000|25.000,23|1.000|25.000,24|1.000|25.000,25|1.000|25.000
+			}
+			ResourceType
+			{
+				Resource = RareMetals
+				MinColor = 0,0.49,0.3516471,1
+				MaxColor = 1,0,0.2235294,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|1.000|6.500,2|1.000|6.500,3|1.000|6.500,4|1.000|6.500,5|1.000|6.500,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|6.500,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|6.500,1|1.000|10.000,2|1.000|10.000,3|1.000|10.000,4|1.000|10.000,5|1.000|10.000,6|1.000|10.000,7|1.000|10.000,8|1.000|10.000,9|1.000|10.000,10|1.000|10.000,11|1.000|10.000,12|1.000|10.000,13|1.000|10.000,14|1.000|10.000,15|1.000|10.000,16|1.000|10.000,17|1.000|10.000,18|1.000|10.000,19|1.000|10.000,20|1.000|10.000,21|1.000|10.000,22|1.000|10.000,23|1.000|10.000,24|1.000|10.000,25|1.000|10.000
+			}
+			ResourceType
+			{
+				Resource = GeoEnergy
+				MinColor = 0,0.79,0.4925883,1
+				MaxColor = 1,0.7254902,0,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|6.500,1|10.000|35.000,2|1.000|35.000,3|1.000|6.500,4|1.000|6.500,5|1.000|35.000,6|1.000|6.500,7|1.000|6.500,8|1.000|6.500,9|1.000|35.000,10|1.000|6.500,11|1.000|6.500,12|1.000|6.500,13|1.000|6.500,14|1.000|6.500,15|1.000|6.500,16|1.000|35.000
+			}
+			ResourceType
+			{
+				Resource = Alumina
+				MinColor = 0.4464706,0,0.69,1
+				MaxColor = 0.07058824,1,0,1
+				Transparency = 20
+				MinMaxValues = 0|0.700|10.000,1|0.700|14.000,2|2.500|35.000,3|0.700|10.000,4|2.500|35.000,5|0.700|10.000,6|5.000|55.000,7|0.700|10.000,8|0.700|10.000,9|0.700|10.000,10|0.700|10.000,11|0.700|10.000,12|0.700|10.000,13|0.700|10.000,14|0.700|10.000,15|0.700|90.000,16|0.700|10.000,1|0.700|10.000,2|0.700|10.000,3|0.700|10.000,4|0.700|10.000,5|0.700|10.000,6|0.700|10.000,7|0.700|10.000,8|0.700|10.000,9|0.700|10.000,10|0.700|10.000,11|0.700|10.000,12|0.700|10.000,13|0.700|10.000,14|0.700|10.000,15|0.700|10.000,16|0.700|10.000,17|0.700|10.000,18|0.700|10.000,19|0.700|10.000,20|0.700|10.000,21|0.700|10.000,22|0.700|10.000,23|0.700|10.000,24|0.700|10.000,25|0.700|10.000
+			}
+			ResourceType
+			{
+				Resource = Borate
+				MinColor = 0.01705883,0.8631765,0.87,1
+				MaxColor = 1,0,0,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|7.500,1|1.000|7.500,2|1.000|7.500,3|1.000|7.500,4|1.000|7.500,5|1.000|7.500,6|1.000|7.500,7|1.000|7.500,8|1.000|7.500,9|1.000|7.500,10|1.000|7.500,11|1.000|7.500,12|1.000|7.500,13|1.000|7.500,14|1.000|7.500,15|1.000|7.500,16|1.000|7.500
+			}
+			ResourceType
+			{
+				Resource = Monazite
+				MinColor = 0.1461176,0.04329412,0.69,1
+				MaxColor = 0,1,0.6784314,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|7.500,1|1.000|15.000,2|1.000|20.000,3|1.000|7.500,4|1.000|7.500,5|1.000|7.500,6|1.000|7.500,7|1.000|7.500,8|1.000|7.500,9|1.000|7.500,10|1.000|7.500,11|1.000|7.500,12|1.000|7.500,13|1.000|7.500,14|1.000|7.500,15|1.000|7.500,16|1.000|7.500
+			}
+			ResourceType
+			{
+				Resource = SaltWater
+				MinColor = 0,0.78,0.3334118,1
+				MaxColor = 0.3882353,0.9215686,1,1
+				Transparency = 20
+				MinMaxValues = 0|0.100|1.000,1|0.100|40.000,2|0.100|1.000,3|0.100|1.000,4|0.100|1.000,5|0.100|1.000,6|0.100|1.000,7|0.100|1.000,8|0.100|1.000,9|0.100|1.000,10|0.100|1.000,11|0.100|1.000,12|0.100|1.000,13|0.100|1.000,14|0.100|1.000,15|0.100|1.000,16|0.100|1.000
+			}
+			ResourceType
+			{
+				Resource = Silicates
+				MinColor = 0.77,0.7216862,0.2627059,1
+				MaxColor = 0.8823529,0.4588235,1,1
+				Transparency = 20
+				MinMaxValues = 0|1.000|7.500,1|1.000|7.500,2|1.000|7.500,3|1.000|7.500,4|1.000|7.500,5|1.000|7.500,6|1.000|7.500,7|1.000|7.500,8|1.000|7.500,9|1.000|7.500,10|1.000|7.500,11|1.000|7.500,12|1.000|7.500,13|1.000|7.500,14|1.000|7.500,15|1.000|7.500,16|1.000|7.500
+			}
+			ResourceType
+			{
+				Resource = SolarWind
+				MinColor = 0.1298824,0.3501177,0.72,1
+				MaxColor = 1,1,0,1
+				Transparency = 20
+				MinMaxValues = 0|0.100|1.000,1|0.100|1.000,2|0.100|1.000,3|0.100|1.000,4|0.500|10.000,5|0.100|1.000,6|0.100|1.000,7|0.100|1.000,8|0.100|1.000,9|0.100|1.000,10|0.100|1.000,11|0.100|1.000,12|0.100|1.000,13|0.100|1.000,14|0.100|1.000,15|0.100|1.000,16|0.100|1.000
+			}
+		}
+	}
+	SCENARIO
+	{
+		name = TRScenario
+		scene = 5
+		reflectionType = REAL
+		isHelmetRemovalEnabled = True
+		isAtmSuitEnabled = True
+		Kerbals
+		{
+			Feng Xiang = M GENERIC GENERIC
+		}
+		ClassSuits
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = TacLifeSupport
+		scene = 5, 6, 7, 8
+		SavedGameSettings
+		{
+			IsNewSave = False
+			Enabled = True
+			UseAppLauncher = True
+			UseEditorFilter = True
+			HibernateInsteadOfKill = False
+			RespawnDelay = 9203545
+		}
+		LifeSupportBuildAid
+		{
+			visible = False
+			x = 810
+			y = 450
+			width = 300
+			height = 180
+		}
+	}
+	SCENARIO
+	{
+		name = KerbalConstructionTimeData
+		scene = 7, 5, 6, 8
+		KCT_DataStorage
+		{
+			enabledForSave = True
+			fundsFromSimulation = 0
+			activeKSC = cn_jiuquan
+			SimulationTime = 
+			SalesFigures = 0
+			UpgradesResetCounter = 0
+			TechUpgrades = 0
+			SavedUpgradePointsPreAPI = 0
+			VABUpgrades
+			{
+				Item = 0
+			}
+			SPHUpgrades
+			{
+				Item = 0
+			}
+			RDUpgrades
+			{
+				Item = 0
+				Item = 0
+			}
+			PurchasedUpgrades
+			{
+				Item = 0
+				Item = 0
+			}
+			BodiesVisited
+			{
+				Item = Earth
+			}
+		}
+		KSC
+		{
+			KSCName = us_cape_canaveral
+			ActiveLPID = 0
+			VABUpgrades
+			{
+				Upgrade = 0
+			}
+			SPHUpgrades
+			{
+				Upgrade = 0
+			}
+			RDUpgrades
+			{
+				Upgrade = 0
+				Upgrade = 0
+			}
+			VABList
+			{
+			}
+			SPHList
+			{
+			}
+			VABWarehouse
+			{
+			}
+			SPHWarehouse
+			{
+			}
+			KSCTech
+			{
+			}
+			Recon_Rollout
+			{
+			}
+			LaunchPads
+			{
+				KCT_LaunchPad
+				{
+					level = 0
+					name = LaunchPad
+					DestructionState
+					{
+					}
+				}
+			}
+		}
+		KSC
+		{
+			KSCName = cn_jiuquan
+			ActiveLPID = 0
+			VABUpgrades
+			{
+				Upgrade = 0
+			}
+			SPHUpgrades
+			{
+				Upgrade = 0
+			}
+			RDUpgrades
+			{
+				Upgrade = 0
+				Upgrade = 0
+			}
+			VABList
+			{
+			}
+			SPHList
+			{
+			}
+			VABWarehouse
+			{
+			}
+			SPHWarehouse
+			{
+			}
+			KSCTech
+			{
+			}
+			Recon_Rollout
+			{
+			}
+			LaunchPads
+			{
+				KCT_LaunchPad
+				{
+					level = 0
+					name = LaunchPad
+					DestructionState
+					{
+					}
+				}
+			}
+		}
+		TechList
+		{
+		}
+	}
+	SCENARIO
+	{
+		name = ScenarioDiscoverableObjects
+		scene = 7, 8, 5
+	}
+	FLIGHTSTATE
+	{
+		version = 1.1.3
+		UT = 4418.66857688292
+		activeVessel = 0
+		mapViewFiltering = -1026
+	}
+	LoaderInfo
+	{
+		ModuleManager.2.6.25 v2.6.25.0 = True
+		MiniAVC v1.0.3.2 = True
+		aaa_Toolbar v1.0.0.0 / v1.7.11.0 = True
+		SolverEngines v2.1.0.0 / v2.3.0.0 = True
+		AJE v2.7.2.0 = True
+		B9_Aerospace_WingStuff v1.0.0.0 = True
+		CLSInterfaces v1.0.0.0 = True
+		ConnectedLivingSpace v1.2.3.0 = True
+		ContractConfigurator v1.0.0.0 / v1.19.0 = True
+		RemoteTech v1.7.0.0 / v1.7.1 = True
+		CC_RemoteTech v1.0.0.0 / v1.19.0 = True
+		CustomBarnKit v1.1.9.0 = True
+		DeadlyReentry v7.4.7.0 = True
+		EngineGroupController v1.0.0.0 = True
+		UnityGUIFramework v1.0.0.0 = True
+		ModularFlightIntegrator v1.0.0.0 / v1.1.6.0 = True
+		FerramAerospaceResearch v0.15.7.2 = True
+		ferramGraph v1.3.0.0 = True
+		Scale_Redist v1.0.0.0 = True
+		Firespitter v7.1.6016.23694 = True
+		KerbalConstructionTime v1.3.4.0 = True
+		KerbalEngineer v1.1.1.0 = True
+		KerbalEngineer.Unity v1.0.0.0 = True
+		KerbalJointReinforcement v3.1.7.0 = True
+		Renamer v1.0.5956.24390 = True
+		Kopernicus.Components v1.0.0.0 = True
+		Kopernicus.OnDemand v1.0.0.0 = True
+		Kopernicus v1.0.0.0 = True
+		KSCSwitcher v1.0.5956.23563 = True
+		KSP-AVC v1.1.6.1 = True
+		MagiCore v1.0.0.0 = True
+		ProceduralFairings v0.0.0.0 = True
+		ProceduralParts v1.2.5.0 = True
+		RCSBuildAid v0.8.1.22534 = True
+		RCSBuildAidToolbar v0.8.1.22534 = True
+		RealChute v1.4.5964.18052 / v1.4.1.1 = True
+		RealFuels v0.11.3.1929 / v0.11.3.1 = True
+		RealHeat v0.4.3.0 = True
+		RealismOverhaul v0.11.2.0 = True
+		RealSolarSystem v0.11.4.0 = True
+		RP0 v0.51.0.0 = True
+		SCANsat v1.6.0.6 / vv16.6 = True
+		ShipManifest v5.1.2.2 = True
+		SmokeScreen v2.6.17.0 = True
+		TextureReplacer v2.4.13.34255 = True
+		TacLifeSupport v0.12.4.0 / v0.12.4 = True
+		MiniAVC v1.0.3.0 = True
+		[x] Science! v5.0.6098.21682 = True
+		000_Toolbar = True
+		AJE = True
+		B9_Aerospace_ProceduralWings = True
+		CommunityResourcePack = True
+		CommunityTechTree = True
+		ConnectedLivingSpace = True
+		ContractConfigurator = True
+		CustomBarnKit = True
+		DeadlyReentry = True
+		EngineGroupController = True
+		FerramAerospaceResearch = True
+		Firespitter = True
+		KerbalConstructionTime = True
+		KerbalEngineer = True
+		KerbalJointReinforcement = True
+		KerbalRenamer = True
+		Kopernicus = True
+		KSCSwitcher = True
+		KSP-AVC = True
+		MagiCore = True
+		MainSailor = True
+		ModularFlightIntegrator = True
+		ProceduralFairings = True
+		ProceduralFairings-ForEverything = True
+		ProceduralParts = True
+		RCSBuildAid = True
+		RealChute = True
+		RealFuels = True
+		RealHeat = True
+		RealismOverhaul = True
+		RealPlume = True
+		RealSolarSystem = True
+		RemoteTech = True
+		RP-0 = True
+		RSS-Textures = True
+		SCANsat = True
+		ShipManifest = True
+		SmokeScreen = True
+		SolverEngines = True
+		SXT = True
+		Taerobee = True
+		TextureReplacer = True
+		ThreePounds = True
+		ThunderAerospace = True
+		VenStockRevamp = True
+		[x] Science! = True
+		ModuleManager.2.6.25.dll = True
+		ModuleManager.ConfigCache = True
+		ModuleManager.ConfigSHA = True
+		ModuleManager.Physics = True
+		ModuleManager.TechTree = True
+		toolbar-settings.dat = True
+	}
+	ROSTER
+	{
+		KERBAL
+		{
+			name = Jebediah Kerman
+			gender = Male
+			type = Applicant
+			trait = Pilot
+			brave = 0.5
+			dumb = 0.5
+			badS = True
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Bill Kerman
+			gender = Male
+			type = Applicant
+			trait = Engineer
+			brave = 0.5
+			dumb = 0.8
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Bob Kerman
+			gender = Male
+			type = Applicant
+			trait = Scientist
+			brave = 0.3
+			dumb = 0.1
+			badS = False
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Valentina Kerman
+			gender = Female
+			type = Applicant
+			trait = Pilot
+			brave = 0.55
+			dumb = 0.4
+			badS = True
+			tour = False
+			state = Available
+			ToD = 0
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+			}
+		}
+		KERBAL
+		{
+			name = Tang Keung
+			gender = Male
+			type = Applicant
+			trait = Scientist
+			brave = 0.7051593
+			dumb = 0.3829639
+			badS = False
+			tour = False
+			state = Available
+			ToD = 204031.745513916
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+		KERBAL
+		{
+			name = Feng Xiang
+			gender = Male
+			type = Crew
+			trait = Pilot
+			brave = 0.6534117
+			dumb = 0.2085999
+			badS = False
+			tour = False
+			state = Available
+			ToD = 149651.481231689
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+		KERBAL
+		{
+			name = Liao Mingli
+			gender = Male
+			type = Applicant
+			trait = Pilot
+			brave = 0.5681251
+			dumb = 0.38266
+			badS = False
+			tour = False
+			state = Available
+			ToD = 157145.159515381
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+		KERBAL
+		{
+			name = Han Bolin
+			gender = Male
+			type = Applicant
+			trait = Scientist
+			brave = 0.5220801
+			dumb = 0.3425514
+			badS = False
+			tour = False
+			state = Available
+			ToD = 130293.732437134
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+		KERBAL
+		{
+			name = Zou Duyi
+			gender = Male
+			type = Applicant
+			trait = Scientist
+			brave = 0.5202056
+			dumb = 0.1266929
+			badS = False
+			tour = False
+			state = Available
+			ToD = 204052.901062012
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+		KERBAL
+		{
+			name = Xu Gen
+			gender = Male
+			type = Applicant
+			trait = Pilot
+			brave = 0.7285657
+			dumb = 0.2905747
+			badS = False
+			tour = False
+			state = Available
+			ToD = 164756.089385986
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+		KERBAL
+		{
+			name = Lei Fang
+			gender = Male
+			type = Applicant
+			trait = Scientist
+			brave = 0.5902083
+			dumb = 0.1302808
+			badS = False
+			tour = False
+			state = Available
+			ToD = 117833.021911621
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+		KERBAL
+		{
+			name = Yuan Dewei
+			gender = Male
+			type = Applicant
+			trait = Engineer
+			brave = 0.4791187
+			dumb = 0.4873942
+			badS = False
+			tour = False
+			state = Available
+			ToD = 121500.718292236
+			idx = -1
+			CAREER_LOG
+			{
+				flight = 0
+			}
+			FLIGHT_LOG
+			{
+				flight = 0
+				0 = Nationality,Chinese
+			}
+		}
+	}
+}
