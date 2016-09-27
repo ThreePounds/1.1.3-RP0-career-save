@@ -2,7 +2,7 @@ ship = Yu Yak-3
 version = 1.1.3
 description = 
 type = SPH
-size = 17.22414,5.961866,9.021751
+size = 17.22416,5.961866,9.021781
 PART
 {
 	part = SXTBuzzard_4294296880
@@ -30,6 +30,7 @@ PART
 	link = RO-B9ProcWing-Early_4294138082
 	link = sensorThermometer_4294099982
 	link = sensorBarometer_4294091376
+	link = airScoop_4292589826
 	attN = top,proceduralStructural_4294216994
 	attN = bottom,proceduralStructural_4294213056
 	EVENTS
@@ -868,7 +869,7 @@ PART
 {
 	part = proceduralStructural_4294216994
 	partName = Part
-	pos = 0.006794085,3.778834,2.911274
+	pos = 0.006794085,3.778834,2.911275
 	attPos = 0,0,0
 	attPos0 = 0,2.734665,-3.259975E-07
 	rot = 0.7071068,0,0,0.7071068
@@ -903,7 +904,7 @@ PART
 		isEnabled = True
 		tempColliderCenter = (0, 0, 0)
 		tempColliderSize = (1.251, 0.1000001, -1.251)
-		textureSet = GreySide
+		textureSet = SoyuzGreen
 		shapeName = Cone
 		moduleCost = 0.1086756
 		stagingEnabled = True
@@ -1451,7 +1452,7 @@ PART
 {
 	part = SXTMerlin46Prop_4293502270
 	partName = Part
-	pos = 0.006794085,3.778834,3.358045
+	pos = 0.006794085,3.778834,3.358051
 	attPos = 0,0,0
 	attPos0 = 0,1.396762,-1.66507E-07
 	rot = 0.7071068,0,0,0.7071068
@@ -1971,7 +1972,7 @@ PART
 {
 	part = proceduralStructural_4294213056
 	partName = Part
-	pos = 0.006794513,3.890329,-1.395729
+	pos = 0.006794513,3.890329,-1.39573
 	attPos = -4.663264E-09,0.1044846,-0.1114936
 	attPos0 = 4.329236E-07,-2.626806,-1.117372E-06
 	rot = 0.6703137,0,0,-0.7420779
@@ -2007,7 +2008,7 @@ PART
 		isEnabled = True
 		tempColliderCenter = (0, 0, 0)
 		tempColliderSize = (1.236, -2.154796, 1.679684)
-		textureSet = GreySide
+		textureSet = SoyuzGreen
 		shapeName = Cone
 		moduleCost = 1.818011
 		stagingEnabled = True
@@ -2555,7 +2556,7 @@ PART
 {
 	part = proceduralStructural_4293502076
 	partName = Part
-	pos = 0.006795147,4.052505,-2.987519
+	pos = 0.006795147,4.052505,-2.987535
 	attPos = 0,0,0
 	attPos0 = 4.456781E-07,1.000006,8.344645E-07
 	rot = 0.6703138,0,0,-0.7420779
@@ -2589,8 +2590,8 @@ PART
 		name = ProceduralPart
 		isEnabled = True
 		tempColliderCenter = (0, 0, 0)
-		tempColliderSize = (0.8, -0.9794529, 1.001674)
-		textureSet = GreySide
+		tempColliderSize = (0.8, -0.979453, 1.001674)
+		textureSet = SoyuzGreen
 		shapeName = Smooth Cone
 		moduleCost = 0.3291231
 		stagingEnabled = True
@@ -3152,7 +3153,7 @@ PART
 	sqor = -1
 	sepI = 0
 	attm = 1
-	modCost = 18.36279
+	modCost = 16.0256
 	modMass = 0.1201715
 	modSize = (0.5, -1.5, 0.3)
 	link = RO-B9ProcWing-Early_4293501770
@@ -3190,26 +3191,26 @@ PART
 		sharedEdgeTypeTrailing = 1
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = True
@@ -3355,7 +3356,7 @@ PART
 		name = ModuleFuelTanks
 		isEnabled = True
 		type = Structural
-		utilization = 50
+		utilization = 10
 		partPrevTemperature = -1
 		mass = 0.1201815
 		stagingEnabled = True
@@ -3564,8 +3565,8 @@ PART
 			temperature = 300
 			fillable = True
 			techRequired = 
-			amount = 1359.8441295560679
-			maxAmount = 1359.8441295560679
+			amount = 467.78761085872856
+			maxAmount = 467.78761085872856
 		}
 		TANK
 		{
@@ -4220,8 +4221,8 @@ PART
 	RESOURCE
 	{
 		name = AvGas
-		amount = 1359.84412955607
-		maxAmount = 1359.84412955607
+		amount = 467.787610858729
+		maxAmount = 467.787610858729
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -4247,7 +4248,7 @@ PART
 	sqor = -1
 	sepI = 0
 	attm = 1
-	modCost = 18.36279
+	modCost = 16.0256
 	modMass = 0.1201715
 	modSize = (0.5, -1.5, 0.3)
 	link = RO-B9ProcWing-Early_4293501654
@@ -4286,26 +4287,26 @@ PART
 		sharedEdgeTypeTrailing = 1
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -4451,7 +4452,7 @@ PART
 		name = ModuleFuelTanks
 		isEnabled = True
 		type = Structural
-		utilization = 50
+		utilization = 10
 		partPrevTemperature = -1
 		mass = 0.1201815
 		stagingEnabled = True
@@ -4660,8 +4661,8 @@ PART
 			temperature = 300
 			fillable = True
 			techRequired = 
-			amount = 1359.8441295560679
-			maxAmount = 1359.8441295560679
+			amount = 467.78761085872856
+			maxAmount = 467.78761085872856
 		}
 		TANK
 		{
@@ -5316,8 +5317,8 @@ PART
 	RESOURCE
 	{
 		name = AvGas
-		amount = 1359.84412955607
-		maxAmount = 1359.84412955607
+		amount = 467.787610858729
+		maxAmount = 467.787610858729
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -5329,7 +5330,7 @@ PART
 {
 	part = RO-B9ProcWing-Early_4293501770
 	partName = Part
-	pos = -4.60845,3.746279,1.695147
+	pos = -4.608466,3.746279,1.695147
 	attPos = 0,0,0
 	attPos0 = 4.500471,-0.002105553,2.384186E-07
 	rot = 0.02821867,0.7065431,0.706544,0.02821882
@@ -5376,26 +5377,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = True
@@ -6454,26 +6455,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -7485,7 +7486,7 @@ PART
 {
 	part = RO-B9ProcCS-Early_4293501538
 	partName = Part
-	pos = -3.964672,3.694773,0.8219609
+	pos = -3.964687,3.694773,0.8219608
 	attPos = 0,0,0
 	attPos0 = 3.854637,-0.8752913,5.960464E-08
 	rot = -0.7070813,-0.006038178,0.06240357,-0.7043477
@@ -7532,26 +7533,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -7875,10 +7876,10 @@ PART
 {
 	part = RO-B9ProcCS-Early_4293501464
 	partName = Part
-	pos = 3.978255,3.694773,0.821961
+	pos = 3.978256,3.694773,0.821961
 	attPos = 0,0,0
 	attPos0 = 3.854636,-0.8752918,8.34465E-07
-	rot = -0.06240357,0.7043476,0.7070814,0.006038154
+	rot = -0.06240354,0.7043477,0.7070814,0.006038144
 	attRot = 0,0,-0.7071068,0.7071068
 	attRot0 = 0.04843428,-0.9988264,4.764879E-07,-4.161149E-06
 	mir = 1,1,1
@@ -7922,26 +7923,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = True
@@ -8265,7 +8266,7 @@ PART
 {
 	part = RO-B9ProcCS-Early_4293501390
 	partName = Part
-	pos = -1.828388,3.523859,0.6135736
+	pos = -1.828395,3.523859,0.613573
 	attPos = 0,0,0
 	attPos0 = 1.711541,-1.083678,7.450581E-08
 	rot = -0.7070813,-0.006038178,0.06240357,-0.7043477
@@ -8312,26 +8313,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -8658,7 +8659,7 @@ PART
 	pos = 1.841973,3.523859,0.6135737
 	attPos = 0,0,0
 	attPos0 = 1.711541,-1.083678,7.450581E-07
-	rot = -0.06240357,0.7043476,0.7070814,0.006038154
+	rot = -0.06240354,0.7043477,0.7070814,0.006038144
 	attRot = 0,0,-0.7071068,0.7071068
 	attRot0 = 0.04843428,-0.9988264,4.764879E-07,-4.161149E-06
 	mir = 1,1,1
@@ -8702,26 +8703,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.6999999
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.09999999
 		sharedMaterialSB = 4
 		sharedColorSBOpacity = 0
 		sharedColorSBHue = 0.1
 		sharedColorSBSaturation = 0.75
 		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = True
@@ -9045,7 +9046,7 @@ PART
 {
 	part = RO-B9ProcWing-Early_4293501242
 	partName = Part
-	pos = 0.006795148,4.150687,-2.979405
+	pos = 0.006795148,4.150687,-2.97943
 	attPos = 0,-0.05416356,-0.217343
 	attPos0 = 0,0.05603025,0.3158423
 	rot = 0.4976701,0.5023192,0.4976701,0.5023192
@@ -9095,26 +9096,26 @@ PART
 		sharedEdgeTypeTrailing = 1
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
-		sharedMaterialSB = 1
-		sharedColorSBOpacity = 0
-		sharedColorSBHue = 0.1
-		sharedColorSBSaturation = 0.75
-		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.7
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.1
+		sharedMaterialSB = 0
+		sharedColorSBOpacity = 0.7
+		sharedColorSBHue = 0.3
+		sharedColorSBSaturation = 0.85
+		sharedColorSBBrightness = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -10126,10 +10127,10 @@ PART
 {
 	part = RO-B9ProcCS-Early_4293501126
 	partName = Part
-	pos = 0.006792713,4.841631,-3.34135
+	pos = 0.006791516,4.841631,-3.341374
 	attPos = 0,0,0
 	attPos0 = 0.6942791,-0.3555045,-1.795013E-07
-	rot = -0.5465377,0.4486614,0.5465367,-0.4486617
+	rot = -0.5465378,0.4486614,0.5465367,-0.4486616
 	attRot = 0,0,-0.7071068,0.7071068
 	attRot0 = -0.1025013,0.9947329,5.960463E-08,-7.748602E-07
 	mir = 1,1,1
@@ -10172,26 +10173,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
-		sharedMaterialSB = 4
-		sharedColorSBOpacity = 0
-		sharedColorSBHue = 0.1
-		sharedColorSBSaturation = 0.75
-		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.7
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.1
+		sharedMaterialSB = 0
+		sharedColorSBOpacity = 0.7
+		sharedColorSBHue = 0.3
+		sharedColorSBSaturation = 0.85
+		sharedColorSBBrightness = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -10515,10 +10516,10 @@ PART
 {
 	part = RO-B9ProcWing-Early_4293501052
 	partName = Part
-	pos = -0.05490349,4.380849,-2.99077
+	pos = -0.05490394,4.380848,-2.990795
 	attPos = 0,0,0
 	attPos0 = 0.230259,-0.009223403,-0.06169777
-	rot = -1.956378E-08,0.7103865,0.7038119,-6.726224E-08
+	rot = -1.678093E-08,0.7103866,0.7038119,-7.034302E-08
 	attRot = 0,0.6087615,0,0.7933535
 	attRot0 = -8.940696E-08,0.7071069,1.297098E-07,0.7071068
 	mir = 1,1,1
@@ -10563,26 +10564,26 @@ PART
 		sharedEdgeTypeTrailing = 1
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
-		sharedMaterialSB = 4
-		sharedColorSBOpacity = 0
-		sharedColorSBHue = 0.1
-		sharedColorSBSaturation = 0.75
-		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.7
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.1
+		sharedMaterialSB = 0
+		sharedColorSBOpacity = 0.7
+		sharedColorSBHue = 0.3
+		sharedColorSBSaturation = 0.85
+		sharedColorSBBrightness = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = True
@@ -11594,10 +11595,10 @@ PART
 {
 	part = RO-B9ProcWing-Early_4293500936
 	partName = Part
-	pos = 0.0684922,4.380849,-2.99077
+	pos = 0.06849187,4.380848,-2.990795
 	attPos = 0,0,0
 	attPos0 = 0.2302589,-0.009223396,0.06169766
-	rot = -0.703812,7.879783E-08,1.705514E-08,-0.7103865
+	rot = -0.703812,7.904291E-08,1.680777E-08,-0.7103865
 	attRot = 0,0.6087615,0,0.7933535
 	attRot0 = -1.35903E-07,0.7071068,-2.682209E-07,-0.7071068
 	mir = 1,1,1
@@ -11642,26 +11643,26 @@ PART
 		sharedEdgeTypeTrailing = 1
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
-		sharedMaterialSB = 4
-		sharedColorSBOpacity = 0
-		sharedColorSBHue = 0.1
-		sharedColorSBSaturation = 0.75
-		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.7
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.1
+		sharedMaterialSB = 0
+		sharedColorSBOpacity = 0.7
+		sharedColorSBHue = 0.3
+		sharedColorSBSaturation = 0.85
+		sharedColorSBBrightness = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -12673,10 +12674,10 @@ PART
 {
 	part = RO-B9ProcCS-Early_4293500820
 	partName = Part
-	pos = -1.060791,4.377079,-3.396859
+	pos = -1.060792,4.377079,-3.396884
 	attPos = 0,0,0
 	attPos0 = 1.005888,-0.4061051,6.660244E-07
-	rot = -0.7037258,-0.01100352,0.01106793,-0.7103003
+	rot = -0.7037262,-0.01100353,0.01106791,-0.7103003
 	attRot = 0,0,-0.7071068,0.7071068
 	attRot0 = -0.01560686,0.9998783,1.192093E-07,-2.715037E-05
 	mir = 1,1,1
@@ -12720,26 +12721,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
-		sharedMaterialSB = 4
-		sharedColorSBOpacity = 0
-		sharedColorSBHue = 0.1
-		sharedColorSBSaturation = 0.75
-		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.7
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.1
+		sharedMaterialSB = 0
+		sharedColorSBOpacity = 0.7
+		sharedColorSBHue = 0.3
+		sharedColorSBSaturation = 0.85
+		sharedColorSBBrightness = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = False
@@ -13063,10 +13064,10 @@ PART
 {
 	part = RO-B9ProcCS-Early_4293500746
 	partName = Part
-	pos = 1.074381,4.377073,-3.39686
+	pos = 1.074381,4.377072,-3.396884
 	attPos = 0,0,0
 	attPos0 = 1.005888,-0.4061051,-8.153026E-08
-	rot = -0.01106804,0.7103001,0.7037262,0.01100344
+	rot = -0.01106805,0.7103001,0.7037262,0.01100344
 	attRot = 0,0,-0.7071068,0.7071068
 	attRot0 = 0.01560683,-0.9998783,1.779543E-07,-2.710056E-05
 	mir = 1,1,1
@@ -13110,26 +13111,26 @@ PART
 		sharedEdgeTypeTrailing = 2
 		sharedEdgeWidthTrailingRoot = 0.48
 		sharedEdgeWidthTrailingTip = 0.48
-		sharedMaterialST = 1
-		sharedColorSTOpacity = 0
-		sharedColorSTHue = 0.1
-		sharedColorSTSaturation = 0.75
-		sharedColorSTBrightness = 0.6
-		sharedMaterialSB = 4
-		sharedColorSBOpacity = 0
-		sharedColorSBHue = 0.1
-		sharedColorSBSaturation = 0.75
-		sharedColorSBBrightness = 0.6
-		sharedMaterialET = 4
-		sharedColorETOpacity = 0
-		sharedColorETHue = 0.1
+		sharedMaterialST = 0
+		sharedColorSTOpacity = 0.7
+		sharedColorSTHue = 0.3
+		sharedColorSTSaturation = 0.85
+		sharedColorSTBrightness = 0.1
+		sharedMaterialSB = 0
+		sharedColorSBOpacity = 0.7
+		sharedColorSBHue = 0.3
+		sharedColorSBSaturation = 0.85
+		sharedColorSBBrightness = 0.1
+		sharedMaterialET = 3
+		sharedColorETOpacity = 0.75
+		sharedColorETHue = 1
 		sharedColorETSaturation = 0.75
-		sharedColorETBrightness = 0.6
-		sharedMaterialEL = 4
-		sharedColorELOpacity = 0
-		sharedColorELHue = 0.1
-		sharedColorELSaturation = 0.75
-		sharedColorELBrightness = 0.6
+		sharedColorETBrightness = 0.2
+		sharedMaterialEL = 0
+		sharedColorELOpacity = 0.7
+		sharedColorELHue = 0.3
+		sharedColorELSaturation = 0.85
+		sharedColorELBrightness = 0.1
 		fuelSelectedTankSetup = 0
 		stagingEnabled = True
 		mirrorTexturing = True
@@ -13453,10 +13454,10 @@ PART
 {
 	part = GearFree_4293500672
 	partName = Part
-	pos = 0.006795138,3.887738,-3.383317
+	pos = 0.006795138,3.887738,-3.383343
 	attPos = 0,0,0
 	attPos0 = 1.783735E-08,0.3770419,-0.2040357
-	rot = 4.655153E-08,-0.9966748,-0.08148408,-9.291909E-10
+	rot = 4.655153E-08,-0.9966748,-0.08148408,-9.291679E-10
 	attRot = -0.1551094,8.057288E-15,5.145655E-16,-0.9878975
 	attRot0 = -3.392197E-08,0.6849903,0.7285522,3.18937E-08
 	mir = 1,1,1
@@ -13537,7 +13538,7 @@ PART
 		name = ModuleWheelSuspension
 		isEnabled = True
 		springTweakable = 1
-		damperTweakable = 1
+		damperTweakable = 2
 		suspensionPos = (-1, -1, -1)
 		autoBoost = 0
 		stagingEnabled = True
@@ -13800,7 +13801,7 @@ PART
 	pos = 2.02083,3.293559,1.593508
 	attPos = 0.3957014,-0.258595,-0.01638678
 	attPos0 = 1.475771,0.1548506,0.2602178
-	rot = 0.001587157,0.9999989,7.152557E-07,-1.176959E-07
+	rot = 0.001587157,0.9999988,6.854534E-07,-1.256121E-07
 	attRot = -0.7387133,-0.6740198,-3.749948E-08,-4.342169E-08
 	attRot0 = 0.06162832,0.7044162,-0.704416,0.06162836
 	mir = 1,1,1
@@ -13881,8 +13882,8 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 0.75
-		damperTweakable = 1.5
+		springTweakable = 1
+		damperTweakable = 2
 		suspensionPos = (-1, -1, -1)
 		autoBoost = 0
 		stagingEnabled = True
@@ -14418,10 +14419,10 @@ PART
 {
 	part = SmallGearBay_4293505066
 	partName = Part
-	pos = -2.007242,3.293559,1.593508
+	pos = -2.00725,3.293559,1.593508
 	attPos = 0.3956999,-0.2585948,0.0163873
 	attPos0 = 1.475772,0.1548504,-0.2602178
-	rot = -0.001587154,0.9999989,7.152557E-07,1.180451E-07
+	rot = -0.00158716,0.9999989,7.152557E-07,1.259614E-07
 	attRot = -0.7387133,-0.6740198,-3.749948E-08,-4.342169E-08
 	attRot0 = -0.7064974,-0.02934015,0.02934009,-0.7064982
 	mir = 1,1,1
@@ -14502,8 +14503,8 @@ PART
 	{
 		name = ModuleWheelSuspension
 		isEnabled = True
-		springTweakable = 0.75
-		damperTweakable = 1.5
+		springTweakable = 1
+		damperTweakable = 2
 		suspensionPos = (-1, -1, -1)
 		autoBoost = 0
 		stagingEnabled = True
@@ -15378,7 +15379,7 @@ PART
 {
 	part = sensorBarometer_4294091376
 	partName = Part
-	pos = -0.5941696,3.939862,2.701119
+	pos = -0.5941696,3.939862,2.70112
 	attPos = 0,0,0
 	attPos0 = -0.6009637,1.574518,-0.1610276
 	rot = 0.09229591,0.7010577,-0.09229591,0.7010573
@@ -15741,10 +15742,10 @@ PART
 {
 	part = GooExperiment_4293500044
 	partName = Part
-	pos = 0.006794521,4.302953,-0.7437923
+	pos = 0.006794521,4.302953,-0.7437999
 	attPos = 0,0,0
 	attPos0 = 9.313226E-10,-0.6067633,0.4765799
-	rot = -2.479039E-09,0.7085503,-0.7056605,3.028828E-09
+	rot = -2.479039E-09,0.7085503,-0.7056605,3.028827E-09
 	attRot = 0,0,0,1
 	attRot0 = -1.906276E-10,-0.9988133,0.04870405,-3.909363E-09
 	mir = 1,1,1
@@ -16117,10 +16118,10 @@ PART
 {
 	part = RO-B9ProcCS-Early_4293499960
 	partName = Part
-	pos = -1.890277,3.335077,1.163707
+	pos = -1.890284,3.335077,1.163707
 	attPos = 0,0,0
 	attPos0 = 1.758181,-0.5335451,-0.1931163
-	rot = -0.7064787,0.006740812,0.06840399,-0.7043889
+	rot = -0.7064787,0.006740816,0.06840399,-0.7043889
 	attRot = -0.03024605,0.7064074,0.03144106,-0.7064596
 	attRot0 = 0.04362679,-0.9989596,-0.0002638697,-0.01328013
 	mir = 1,1,1
@@ -16245,7 +16246,7 @@ PART
 		isFlap = False
 		isSpoiler = True
 		flapDeflectionLevel = 0
-		maxdeflectFlap = -20
+		maxdeflectFlap = -25.5
 		massMultiplier = 1
 		stagingEnabled = True
 		pitchaxis_UIFlight
@@ -16367,7 +16368,7 @@ PART
 		{
 			ActivateSpoiler
 			{
-				actionGroup = Brakes
+				actionGroup = Custom01
 			}
 			IncreaseDeflect
 			{
@@ -16635,7 +16636,7 @@ PART
 		isFlap = False
 		isSpoiler = True
 		flapDeflectionLevel = 0
-		maxdeflectFlap = -20
+		maxdeflectFlap = -25.5
 		massMultiplier = 1
 		stagingEnabled = True
 		pitchaxis_UIFlight
@@ -16757,7 +16758,7 @@ PART
 		{
 			ActivateSpoiler
 			{
-				actionGroup = Brakes
+				actionGroup = Custom01
 			}
 			IncreaseDeflect
 			{
@@ -16897,10 +16898,10 @@ PART
 {
 	part = strutConnector_4293499812
 	partName = CompoundPart
-	pos = 0.00679199,5.562227,-2.786074
+	pos = 0.00678946,5.562232,-2.786097
 	attPos = 0,0,0
 	attPos0 = 1.409678,0.2064464,-2.917409E-07
-	rot = -0.7030379,0.07574961,0.7030379,-0.07574821
+	rot = -0.7030379,0.07574984,0.7030379,-0.07574823
 	attRot = 0,0,0,1
 	attRot0 = -0.6309029,0.7758619,-4.470348E-07,5.662441E-07
 	mir = 1,1,1
@@ -16924,9 +16925,9 @@ PART
 	PARTDATA
 	{
 		tgt = 4294296880
-		pos = -3.199102,1.465445,-0.00926146
-		rot = -7.505106E-09,-1.404438E-06,-0.7097327,0.7044737
-		dir = -0.9091489,0.416463,-0.002632003
+		pos = -3.199106,1.465445,-0.009261261
+		rot = -3.305611E-08,-1.424213E-06,-0.709733,0.704474
+		dir = -0.909149,0.4164627,-0.002631943
 	}
 	MODULE
 	{
@@ -17128,7 +17129,7 @@ PART
 {
 	part = RTShortAntenna1_4293499734
 	partName = Part
-	pos = 4.311884,3.721466,2.887305
+	pos = 4.311885,3.721466,2.887306
 	attPos = 0,0.3536852,-3.874302E-07
 	attPos0 = 4.189619,0.8427276,2.980232E-07
 	rot = -0.7063305,-0.03311677,0.02332019,0.7067227
@@ -17506,5 +17507,248 @@ PART
 		ACTIONS
 		{
 		}
+	}
+}
+PART
+{
+	part = airScoop_4292589826
+	partName = Part
+	pos = 0.006794084,2.854539,0.24195
+	attPos = 0,-2.384186E-07,-0.03599977
+	attPos0 = -9.313226E-10,-0.8846464,0.9602942
+	rot = 1.192093E-07,0,-1.163683E-09,1
+	attRot = 0,0,0,1
+	attRot0 = -0.7071068,-8.228484E-10,-8.228484E-10,0.7071069
+	mir = 1,1,1
+	symMethod = Mirror
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,SXTBuzzard_4294296880
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = AJEInlet
+		isEnabled = True
+		intakeEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			Deactivate
+			{
+				active = True
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Close Intake
+				guiName = Close Intake
+				category = Close Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiActiveUncommand = False
+				guiIcon = Open Intake
+				guiName = Open Intake
+				category = Open Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = GeometryPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARAeroPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FARPartModule
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAeroReentry
+		isEnabled = True
+		dead = False
+		crashTolerance = 8
+		damage = 0
+		stagingEnabled = True
+		EVENTS
+		{
+			ResetRecordedHeat
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Reset Heat Record
+				guiName = Reset Heat Record
+				category = Reset Heat Record
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = False
+			}
+			RepairDamage
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = No Damage
+				guiName = No Damage
+				category = No Damage
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = False
+			}
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleShowInfo
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+			ToggleStaging
+			{
+				active = True
+				guiActive = False
+				guiActiveUncommand = False
+				guiIcon = Disable Staging
+				guiName = Disable Staging
+				category = Disable Staging
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = IntakeAir
+		amount = 2
+		maxAmount = 2
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		isVisible = False
+		flowMode = Both
 	}
 }
