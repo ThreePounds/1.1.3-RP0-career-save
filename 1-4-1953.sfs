@@ -111,7 +111,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 63510568.1555709
+		update = 63422299.360063
 		version = 1.1.3
 		WEIGHTS
 		{
@@ -6285,7 +6285,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.SoundingRocketMedium
 						title = Destination: Earth
 						notes = 
 						completedMessage = 
@@ -6297,7 +6296,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.SoundingRocketMedium
 						title = Altitude: Above 410,000 m
 						notes = 
 						completedMessage = 
@@ -6326,7 +6324,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.SoundingRocketMedium
 						title = Unmanned
 						notes = 
 						completedMessage = 
@@ -6402,7 +6399,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.SoundingRocketHigh
 						title = Destination: Earth
 						notes = 
 						completedMessage = 
@@ -6414,7 +6410,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.SoundingRocketHigh
 						title = Altitude: Above 3,300,000 m
 						notes = 
 						completedMessage = 
@@ -6443,11 +6438,292 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.SoundingRocketHigh
 						title = Unmanned
 						notes = 
 						completedMessage = 
 					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 37b63df1-86ce-4c34-a69b-7d5131b1c6eb
+			type = ConfiguredContract
+			prestige = 1
+			seed = 283515883
+			state = Offered
+			agent = Federation Aeronautique Internationale
+			deadlineType = Floating
+			expiryType = None
+			ignoresWeight = True
+			values = 518400,94608000,62500,62500,200000,0,88,88,63493493.8985315,0,0,0
+			subtype = first_KarmanCrewed
+			title = Pass the Karman Line (crewed)
+			description = The Karman line is the line at which the speed necessary to maintain altitude via lift is the same as the speed required for orbit. It's the traditional dividing line between the atmosphere and space (despite their being nonzero pressure well above it, Earth's atmosphere extends quite far indeed). We want you to send someone above it! Note that once you commit to human spaceflight, you have to follow through: this contract has a deadline, and you'll suffer quite the penalty to your budget and prestige if you don't succeed. Make sure you have time to research everything you'll need!
+			synopsis = Pass the Karman line with a crewed craft.
+			completedMessage = Congratulations! The first person in space!
+			hash = -1504406106
+			targetBody = Earth
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = RP0.first_KarmanCrewed
+				title = Pass the Karman Line (crewed) and return to Earth.
+				notes = 
+				completedMessage = 
+				define = karmanCrewedSpacecraft
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = NewVessel
+					id = NewVessel
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_KarmanCrewed
+					title = Launch a new vessel
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					launchID = 0
+				}
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_KarmanCrewed
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Count: At least 1 
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachStateKarman
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_KarmanCrewed
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = False
+					targetBody = Earth
+					minAltitude = 100000
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Earth
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Destination: Earth
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Altitude: Above 100,000 m
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Altitude: Above 100,000 m
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_KarmanCrewed
+					title = Land or splashdown on Earth
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 057c5e7b-cf3b-4d2f-b087-f9de1da21c8d
+			type = ConfiguredContract
+			prestige = 1
+			seed = 247256628
+			state = Offered
+			agent = Research & Development Department
+			deadlineType = Floating
+			expiryType = None
+			ignoresWeight = True
+			values = 432000,94608000,12500,43750,31250,0,50,50,63498061.8985315,0,0,0
+			subtype = first_CrewedSupersonic
+			title = Break the Sound Barrier (Crewed)
+			description = Design, build and fly a crewed aircraft or rocket to attain 350 meters per second.
+			synopsis = Fly a crewed craft to reach 350 m/s.
+			completedMessage = Boom! Congratulations, you have broken the sound barrier.
+			hash = 924009828
+			targetBody = Earth
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = RP0.first_CrewedSupersonic
+				title = Hold 350 m/s for 1 minute with a crewed craft.
+				notes = 
+				completedMessage = 
+				define = crewedSoundBarrierCraft
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = NewVessel
+					id = NewVessel
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_CrewedSupersonic
+					title = Launch a new vessel
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					launchID = 0
+				}
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_CrewedSupersonic
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					minCrew = 1
+					maxCrew = 2147483647
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = CountParameterDelegate`1
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Count: At least 1 
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ReachState
+					id = ReachSpeed
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_CrewedSupersonic
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = False
+					targetBody = Earth
+					situation = FLYING
+					minSpeed = 350
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Earth
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Destination: Earth
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Situation: Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Situation: Flying
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Speed: Greater than 350 m/s
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						title = Speed: Greater than 350 m/s
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = Duration
+						id = Duration
+						state = Incomplete
+						values = 0,0,0,0,0
+						ContractIdentifier = RP0.first_CrewedSupersonic
+						title = 
+						notes = 
+						completedMessage = 
+						duration = 60
+						preWaitText = Reach supersonic speed (>350m/s)
+						waitingText = Hold together...
+						completionText = You may slow down and land when ready.
+						endTime = 0
+						startCriteria = CONTRACT_ACCEPTANCE
+						triggered = False
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = RP0.first_CrewedSupersonic
+					title = Land or splashdown on Earth
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
 				}
 			}
 		}
@@ -6520,7 +6796,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.CrewedFlightLow
 						title = Count: At least 1 
 						notes = 
 						completedMessage = 
@@ -6531,7 +6806,6 @@ GAME
 					name = ReachState
 					id = ReachAlt
 					state = Incomplete
-					disableOnStateChange = False
 					values = 0,0,0,0,0
 					ContractIdentifier = RP0.CrewedFlightLow
 					title = Hold between 4050 and 5050 meters.
@@ -6548,7 +6822,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.CrewedFlightLow
 						title = Destination: Earth
 						notes = 
 						completedMessage = 
@@ -6560,7 +6833,6 @@ GAME
 						state = Incomplete
 						disableOnStateChange = False
 						values = 0,0,0,0,0
-						ContractIdentifier = RP0.CrewedFlightLow
 						title = Altitude: Between 4,050 m and 5,050 m
 						notes = 
 						completedMessage = 
@@ -6570,7 +6842,6 @@ GAME
 						name = Duration
 						id = Duration
 						state = Incomplete
-						disableOnStateChange = False
 						values = 0,0,0,0,0
 						ContractIdentifier = RP0.CrewedFlightLow
 						title = 
@@ -6610,6 +6881,8 @@ GAME
 			contract = e35642ca-d1d8-4f22-b128-da78c4a10cf0
 			contract = 6f7314ca-5ff0-46af-8171-cf68c5115bcc
 			contract = c20184d7-fa89-4d2d-8481-a96540ad4606
+			contract = 37b63df1-86ce-4c34-a69b-7d5131b1c6eb
+			contract = 057c5e7b-cf3b-4d2f-b087-f9de1da21c8d
 			contract = f04abaf6-e893-4c2f-8a27-e97a6bc8d16a
 		}
 	}
@@ -6638,7 +6911,7 @@ GAME
 	{
 		name = RemoteTechProgressTracker
 		scene = 7, 8, 5
-		nextCheck = 9775
+		nextCheck = 9737
 		CelestialBodyInfo
 		{
 			body = Sun
@@ -9045,21 +9318,13 @@ GAME
 			HibernateInsteadOfKill = False
 			RespawnDelay = 9203545
 		}
-		LifeSupportMonitoring
+		TACLifeSupportSettings
 		{
 			visible = False
-			x = 810
-			y = 75
-			width = 300
-			height = 300
-		}
-		LifeSupportCrewRoster
-		{
-			visible = False
-			x = 800
-			y = 440
-			width = 320
-			height = 200
+			x = 760
+			y = 390
+			width = 409
+			height = 334
 		}
 	}
 	SCENARIO
@@ -9267,7 +9532,7 @@ GAME
 				{
 					shipName = Kunpeng-3
 					shipID = a37d66ad-6be1-4c27-9b5e-6088a1105440
-					progress = 72326.6560379905
+					progress = 19334.3049191102
 					buildTime = 4467978.35080175
 					launchSite = LaunchPad
 					flag = ThreePounds/Flags/PRC
@@ -89117,7 +89382,7 @@ GAME
 				{
 					name = Vessel Rollout
 					BP = 44230.3190251968
-					progress = 44230.3190251968
+					progress = 19332.8649188742
 					cost = 0
 					associatedID = ac72f40a-e78e-420e-ac6e-636ae12e5bec
 					launchPadID = LaunchPad
@@ -107043,7 +107308,7 @@ GAME
 				techName = Mature Supersonic Flight
 				techID = aviation
 				scienceCost = 10
-				progress = 1.95440513489759
+				progress = 1.91939729259107
 				ProtoNode
 				{
 					id = aviation
@@ -107078,7 +107343,7 @@ GAME
 	{
 		name = TestFlightRnDScenario
 		scene = 7, 6, 5, 8
-		lastUpdateTime = 63493477.1020142
+		lastUpdateTime = 63406540.4687863
 	}
 	SCENARIO
 	{
@@ -107091,7 +107356,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.1.3
-		UT = 63510569.2155711
+		UT = 63422302.9400636
 		activeVessel = 0
 		mapViewFiltering = 1023
 	}
